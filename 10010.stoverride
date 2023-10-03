@@ -1,0 +1,40 @@
+#SUBSCRIBED https://github.com/
+ChinaTelecomOperators/ChinaUnicom/releases/ download/Prerelease-Alpha/10010. stoverride
+name：联通余量（v4）
+desc:
+定时查询 与 Tile 面板
+# 查看仓库
+https://github.com/
+ChinaTelecomOperators/ChinaUnicom
+http:
+force-http-engine:
+- "10010v4. com" mitm:
+- 10010v4.com
+script:
+- match: ^https?:\/\/10010v4\.com
+name："联通余量（v4）"
+type: request
+# require-body: true
+timeout: 60
+# debug: true
+tiles:
+- name："联通余量（v4）"
+interval: 300
+title："联通余量"
+content：""
+icon: "arrow.up.arrow.down.circle" backgroundColor: "#663399"
+timeout: 60
+# debug: true
+cron:
+script:
+- name: cron:
+"联通余量（v4）"
+"*/60 * * * *" # at every 5th
+minute
+timeout: 60
+# debug: true
+script-providers:
+"联通余量（v4）"：
+ur1："https://github.com/
+ChinaTelecomOperators/ChinaUnicom/releases/ download/Prerelease-Alpha/10010. js"
+interval: 86400
